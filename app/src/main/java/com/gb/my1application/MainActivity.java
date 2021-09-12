@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             EditText age = findViewById(R.id.age);
             settings = getSharedPreferences("Profile", MODE_PRIVATE);
             SharedPreferences.Editor prefEditor = settings.edit();
-            prefEditor.putString()=
+//            prefEditor.putString()=
                     collectData(name, surname, age);
 
             Intent switcher= new Intent(MainActivity.this, SecondaryActivity.class);
