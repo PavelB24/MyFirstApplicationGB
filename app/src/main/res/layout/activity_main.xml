@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DBDBDD"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:background="#DBDBDD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -52,12 +54,14 @@
             android:orientation="horizontal"
             android:visibility="visible">
             <ToggleButton
+                android:id="@+id/tb1"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:textColor="@color/teal_700"
                 android:textOff="Подписаться"
                 android:textOn="Подписка оформлена"/>
             <ToggleButton
+                android:id="@+id/tb2"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:textColor="@color/teal_700"
@@ -65,10 +69,22 @@
                 android:textOn="Страховка оформлена"/>
         </LinearLayout>
         <CheckBox
+            android:id="@+id/checkbox1"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:text="Согласен на обработку информации"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="     Укажите дату рождения"
+            android:textColor="#6E41BD"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <CalendarView
+            android:id="@+id/calendar"
             android:layout_width="match_parent"
             android:layout_height="300dp"/>
 
