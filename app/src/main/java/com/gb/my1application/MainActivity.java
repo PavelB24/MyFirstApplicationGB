@@ -13,37 +13,50 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences profile;
+    EditText nameEditText;
+    EditText surnameEditText;
+    EditText ageEditText;
+    ToggleButton tb1ToggleButton;
+    ToggleButton tb2ToggleButton;
+    CheckBox checkBox;
+    CalendarView calendarView;
+    Button button;
+    SharedPreferences.Editor prefEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button = findViewById(R.id.submit_button);
+        toInitialize();
         button.setOnClickListener(view -> {
-            profile = getSharedPreferences("Profile", MODE_PRIVATE);
-            EditText nameEditText = findViewById(R.id.name);
-            EditText surnameEditText = findViewById(R.id.surname);
-            EditText ageEditText = findViewById(R.id.age);
-            ToggleButton tb1ToggleButton = findViewById(R.id.tb1);
-            ToggleButton tb2ToggleButton = findViewById(R.id.tb2);
-            CheckBox checkBox = findViewById(R.id.checkbox1);
-            CalendarView calendarView = findViewById(R.id.calendar);
-            collectData(nameEditText, surnameEditText, ageEditText, tb1ToggleButton,
-                    tb2ToggleButton, checkBox, calendarView);
+            collectData();
             Intent switcher = new Intent(MainActivity.this, SecondaryActivity.class);
             MainActivity.this.startActivity(switcher);
         });
     }
 
-    private void collectData(EditText name, EditText surname, EditText age, ToggleButton tb1,
-                             ToggleButton tb2, CheckBox checkBox, CalendarView calendarView) {
+    private void toInitialize() {
+        profile = getSharedPreferences("Profile", MODE_PRIVATE);
+        nameEditText = findViewById(R.id.name);
+        surnameEditText = findViewById(R.id.surname);
+        ageEditText = findViewById(R.id.age);
+        tb1ToggleButton = findViewById(R.id.tb1);
+        tb2ToggleButton = findViewById(R.id.tb2);
+        checkBox = findViewById(R.id.checkbox1);
+        calendarView = findViewById(R.id.calendar);
+        button = findViewById(R.id.submit_button);
+        prefEditor = profile.edit();
+    }
+
+    private void collectData() {
         SharedPreferences.Editor prefEditor = profile.edit();
-        prefEditor.putString("Name", name.toString());
-        prefEditor.putString("Surname", surname.toString());
+        prefEditor.putString("Name", nameEditText.toString());
+        prefEditor.putString("Surname", surnameEditText.toString());
         prefEditor.putInt("Birthday", calendarView.getDateTextAppearance());
-        prefEditor.putString("Age", age.toString());
-        prefEditor.putBoolean("Subscribed", tb1.isChecked());
-        prefEditor.putBoolean("Insured", tb2.isChecked());
+        prefEditor.putString("Age", ageEditText.toString());
+        prefEditor.putBoolean("Subscribed", tb1ToggleButton.isChecked());
+        prefEditor.putBoolean("Insured", tb2ToggleButton.isChecked());
         prefEditor.putBoolean("Permission", checkBox.isChecked());
+        prefEditor.apply();
     }
 }
