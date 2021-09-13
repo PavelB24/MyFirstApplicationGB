@@ -17,9 +17,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="          Данные профиля"
+            android:text="@string/profile_data"
             android:textColor="#1E3BDF"
             android:textSize="30sp"
+            android:layout_marginLeft="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -30,15 +31,16 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:hint="Введите номер для связи"
+            android:hint="@string/number_hint"
             android:inputType="phone" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="    Введите логин и пароль"
+            android:text="@string/data_and_password_title"
             android:textColor="@color/teal_700"
             android:textSize="30sp"
+            android:layout_marginLeft="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -49,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:hint="Введите эл-почту"
+            android:hint="@string/e_mail_hint"
             android:inputType="textWebEmailAddress" />
 
         <EditText
@@ -57,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:hint="Введите пароль"
+            android:hint="@string/password_hint"
             android:inputType="textPassword" />
 
         <Button
@@ -65,7 +67,7 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:layout_marginLeft="160dp"
-            android:text="Отправить"
+            android:text="@string/send_button_text"
             android:textSize="20dp"
             android:textStyle="italic" />
 

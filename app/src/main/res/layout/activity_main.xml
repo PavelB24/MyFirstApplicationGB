@@ -17,8 +17,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="     Введите данные"
+            android:text="@string/title_one"
             android:textColor="@color/black"
+            android:layout_marginLeft="40dp"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -30,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:hint="Введите имя"
+            android:hint="@string/name_hint"
             android:inputType="textPersonName"/>
 
         <EditText
@@ -38,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:hint="Введите Фамилию"
+            android:hint="@string/surname_hint"
             android:inputType="textPersonName"/>
 
         <EditText
@@ -46,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:hint="Введите возраст"
+            android:hint="@string/age_hint"
             android:inputType="number"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,27 +59,28 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:textColor="@color/teal_700"
-                android:textOff="Подписаться"
-                android:textOn="Подписка оформлена"/>
+                android:textOff="@string/subscribe"
+                android:textOn="@string/subscribe_ok"/>
             <ToggleButton
                 android:id="@+id/tb2"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:textColor="@color/teal_700"
-                android:textOff="Оформить страховку"
-                android:textOn="Страховка оформлена"/>
+                android:textOff="@string/insurance"
+                android:textOn="@string/insurance_ok"/>
         </LinearLayout>
         <CheckBox
             android:id="@+id/checkbox1"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:text="Согласен на обработку информации"/>
+            android:text="@string/permission_text"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="     Укажите дату рождения"
+            android:text="@string/birthday_request"
             android:textColor="#6E41BD"
             android:textSize="30sp"
+            android:layout_marginLeft="35dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -92,7 +94,7 @@
             android:id="@+id/submit_button"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="далее"
+            android:text="@string/next_button_text"
             android:textColor="@color/black"
             android:textSize="30dp" />
 

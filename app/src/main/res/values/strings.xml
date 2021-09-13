@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="title_one">Введите данные</string>
+    <string name="name_hint">Введите имя</string>
+    <string name="surname_hint">Введите Фамилию</string>
+    <string name="age_hint">Введите возраст</string>
+    <string name="subscribe">Подписаться</string>
+    <string name="subscribe_ok">Подписка оформлена</string>
+    <string name="insurance">Оформить страховку</string>
+    <string name="insurance_ok">Страховка оформлена</string>
+    <string name="permission_text">Согласен на обработку информации</string>
+    <string name="birthday_request">Укажите дату рождения</string>
+    <string name="next_button_text">далее</string>
+    <string name="profile_data">Данные профиля</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="e_mail_hint">Введите эл-почту</string>
+    <string name="send_button_text">Отправить</string>
+    <string name="data_and_password_title">Введите логин и пароль</string>
+    <string name="number_hint">Введите номер для связи</string>
 </resources>
